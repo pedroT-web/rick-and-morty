@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick e Morty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="corpo_pag1">
+        <div class="container_cards container my-5">
+            <h1 class="titulo text-center mb-4">Rick e Morty</h1>
+            <div class="cabecalho_invisivel">
+                <a class="botoes_header" href="./index.html">Cards</a>
+                <a class="botoes_header" href="./pesquisa.html">Pesquisar</a>
+            </div>
+            <div id="rick-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rol-cols-lg-4 g-5">
+                <!-- Local de cards -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const container = document.getElementById("rick-container")
+
+        function procurarPersonagem(id) {
+            return fetch("https://rickandmortyapi.com/api/character/" + id)
+                .then(function (resposta) {
+                    return resposta.json()
+                })
+        }
+
+        async function carregarPersonagem() {
+            for (let i = 1; i <= 20; i++) {
+                const personagemAtual = await procurarPersonagem(i)
+                let nome = personagemAtual.name
+                let idPersonagem = personagemAtual.id
+                let imagemPersonagem = personagemAtual.image
+
+                console.log(idPersonagem, nome, imagemPersonagem)
+
+                const coluna = document.createElement('div')
+                coluna.className = 'col'
+
+                coluna.innerHTML = `
+                    <div class="card shadow-sm card_personagens">
+                        <h5 class="titulo_card cabecalho_cards text-center">${nome}</h5>
+                        <div class="card-body h-100 text-center">
+                            <img src="${imagemPersonagem}" alt="${nome}" class="pokemon-img mb-2 img-fluid">
+                            
+                            <p class="id_cards card-text text-muted">#${idPersonagem}</p>
+                        </div>
+                    </div>
+                `
+
+                container.appendChild(coluna)
+            }
+        }
+
+        carregarPersonagem()
+    </script>
+</body>
+
+</html>
