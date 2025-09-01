@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rick e Morty</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
-
-
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-    <section class="corpo_pag1">
-        <div class="container_cards container my-5">
-            <h1 class="titulo text-center mb-4">Rick e Morty</h1>
-            <div class="cabecalho_invisivel">
-                <a class="botoes_header" href="./index.html">Cards</a>
-                <a class="botoes_header" href="./pesquisa.html">Pesquisar</a>
-            </div>
-            <div id="rick-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rol-cols-lg-4 g-5">
-                <!-- Local de cards -->
-            </div>
-        </div>
-    </section>
-
-
-
-    <script>
-        const container = document.getElementById("rick-container")
+ const container = document.getElementById("rick-container")
 
         function procurarPersonagem(id) {
             return fetch("https://rickandmortyapi.com/api/character/" + id)
@@ -67,7 +35,3 @@
         }
 
         carregarPersonagem()
-    </script>
-</body>
-
-</html>
