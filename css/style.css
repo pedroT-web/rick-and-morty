@@ -1,19 +1,29 @@
-*{
+* {
     margin: 0;
-}
-.corpo_pag1, .container_cards, .pag_2{
-    background-color: #59BCE6;
+    
 }
 
-.pag_2{
+.corpo_pag1,
+.container_cards,
+.pag_2 {
+    background-color: #59BCE6;
+
+    width: 100%;
+    height: 100%;
+}
+
+.pag_2 {
     height: 100%;
     margin: 0;
 }
 
-.titulo, .titulo_pesquisar{
+.titulo,
+.titulo_pesquisar {
     color: #DE43CD;
 }
-.cabecalho_invisivel, .titulo_pesquisar{
+
+.cabecalho_invisivel,
+.titulo_pesquisar {
     margin-top: 30px;
     margin-bottom: 40px;
 
@@ -22,39 +32,75 @@
     gap: 10px;
 }
 
-.botoes_header, .botoes_header_2{
+.botoes_header,
+.botoes_header_2 {
     text-decoration: none;
     color: #DE43CD;
 }
-.botoes_header:hover, .botoes_header_2:hover{
+
+.botoes_header:hover,
+.botoes_header_2:hover {
     scale: 1.07;
 
 }
 
-.cabecalho_cards{
+.cabecalho_cards {
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
-.card{
+.card {
     width: 90%;
 }
-.card_personagens{
+
+.card_personagens {
     transition: 0.2s;
     background-color: #98EDE0;
+    padding-bottom: 20px;
 }
 
-.card_personagens:hover{
+.card_personagens:hover {
     transition: 0.2s;
     scale: 1.02;
 }
 
-.id_cards{
+.id_cards {
     margin-top: 30px;
     font-size: 30px;
     color: #DE43CD !important;
 }
 
-.titulo_card{
+.titulo_card {
     color: #DE43CD;
+}
+
+.botao_verPersonagem {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #59BCE6;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s;
+}
+
+.botao_verPersonagem:hover {
+    transition: 0.5s;
+    background-color: #DE43CD;
+}
+
+.pagina_3{
+    height: 813px;
+    background-color: #59BCE6;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card_personagem{
+    background-color: #DE43CD;
 }
