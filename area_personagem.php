@@ -5,7 +5,6 @@ $id = $_GET['id'];
 $nome = $_GET['nome'];
 $img = $_GET['url'];
 
-var_dump($id)
 ?>
 
 <section class="pagina_3">

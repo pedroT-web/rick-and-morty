@@ -1,14 +1,14 @@
 
 <?php
-include './template/header.php'
+include './template/header.php';
+
+if (isset($_GET["alert"]) && $_GET["alert"] == 1){
+ echo "<div class='alert alert-success' role='alert'> Personagem Já Cadastrado </div>";
+}
 ?>
+
 <section class="corpo_pag1">
-    <div class="container_cards container my-5">
-        <h1 class="titulo text-center mb-4">Rick e Morty</h1>
-        <div class="cabecalho_invisivel">
-            <a class="botoes_header" href="./index.php">Cards</a>
-            <a class="botoes_header" href="./pesquisa.php">Pesquisar</a>
-        </div>
+    <div class="container_cards container my-5">        
         <div id="rick-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rol-cols-lg-4 g-5">
             <!-- Local de cards -->
         </div>

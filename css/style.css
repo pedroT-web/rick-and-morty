@@ -22,7 +22,7 @@
     color: #DE43CD;
 }
 
-.cabecalho_invisivel,
+
 .titulo_pesquisar {
     margin-top: 30px;
     margin-bottom: 40px;
@@ -103,4 +103,16 @@
 
 .card_personagem{
     background-color: #DE43CD;
+}
+
+.cabecalho_invisivel{
+    background-color: #59BCE6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao_listas{
+    background-color: #59BCE6;
+    padding: 15px;
 }
