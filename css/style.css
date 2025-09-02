@@ -74,7 +74,7 @@
     color: #DE43CD;
 }
 
-.botao_verPersonagem {
+.botao_verPersonagem, .botao_salvar{
     text-decoration: none;
     padding: 10px;
     background-color: #59BCE6;
@@ -83,7 +83,7 @@
     transition: 0.5s;
 }
 
-.botao_verPersonagem:hover {
+.botao_verPersonagem:hover, .botao_salvar:hover {
     transition: 0.5s;
     background-color: #DE43CD;
 }

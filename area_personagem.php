@@ -4,6 +4,8 @@ include './template/header.php';
 $id = $_GET['id'];
 $nome = $_GET['nome'];
 $img = $_GET['url'];
+
+var_dump($id)
 ?>
 
 <section class="pagina_3">
@@ -42,7 +44,7 @@ $img = $_GET['url'];
                             
                             <p class="id_cards card-text text-muted">#${idPersonagem}</p>
 
-                            <a href="./salvar_personagem.php">Salvar</a>
+                            <a class="botao_salvar" href="./salvar_personagem.php?id_salvar=${idPersonagem}&nome_salvar=${nome}&img_salvar=${imagemPersonagem}">Salvar</a>
                         </div>
                     </div>
                 `

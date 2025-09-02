@@ -1,14 +1,15 @@
 <?php
 
-$ENV = parse_ini_file('.env');
+$_ENV = parse_ini_file('.env');
 
-$id_salvar = $_GET['$id'];
-$nome_salvar = $_GET['$nome'];
-$imagem = $_GET['$img'];
+$id = $_GET["id_salvar"];
+$nome_salvar = $_GET["nome_salvar"];
+$imagem = $_GET["img_salvar"];
 
-$dsn = "dbname={$ENV['DB_NAME']};host={$ENV['DB_LOCAL']}";
-$usuario = "{$ENV['USER']}";
-$senha = "{$ENV['SENHA']}";
+
+$dsn = "mysql:dbname={$_ENV['DB_NAME']};host={$_ENV['DB_LOCAL']}";
+$usuario = "{$_ENV['USER']}";
+$senha = "{$_ENV['SENHA']}";
 
 $conn = new PDO ($dsn, $usuario, $senha);
 
@@ -26,3 +27,5 @@ $scriptPreparado->execute([
 ":nome_personagem" => $nome_salvar,
 ":imagem" => $imagem
 ]);
+
+header ("location:./index.php");
